@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nursing Theories - Interactive Platform</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1><i class="fas fa-graduation-cap"></i> Nursing Theories</h1>
+            <div class="header-actions">
+                <button id="darkModeToggle" class="btn btn-outline"><i class="fas fa-moon"></i> Night Mode</button>
+                <button id="resetProgressBtn" class="btn btn-danger"><i class="fas fa-undo"></i> Reset</button>
+            </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar-container">
+            <span class="progress-text"><i class="fas fa-chart-line"></i> Progress:</span>
+            <div class="progress-track">
+                <div id="progressFill" class="progress-fill" style="width:0%"></div>
+            </div>
+            <span id="progressLabel" class="progress-text">0 / 0</span>
+            <span id="statusMessage" class="progress-text" style="color:var(--accent);"></span>
+        </div>
+
+        <!-- Lessons Container -->
+        <div id="lessonsContainer"></div>
+
+        <!-- Translation Panel (Bottom) -->
+        <div class="translation-panel" id="translationPanel">
+            <h4><i class="fas fa-language"></i> Custom Translator</h4>
+            <textarea id="translateInput" placeholder="Paste English text here..."></textarea>
+            <button id="translateTextBtn" class="btn"><i class="fas fa-exchange-alt"></i> Translate to Arabic</button>
+            <div id="translationOutput" style="margin-top:12px;padding:12px;background:var(--bg-card);border-radius:10px;min-height:40px;color:var(--text-primary);"></div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
